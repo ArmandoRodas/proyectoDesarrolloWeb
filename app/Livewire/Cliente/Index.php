@@ -22,12 +22,12 @@ class Index extends Component
     protected $paginationTheme = 'bootstrap';
 
     protected $rules = [
-       'codigo_cliente' => 'required',
-       'nombre_cliente' => 'required',
-       'nit_cliente' => 'required',
-       'direccion_cliente' => 'required',
+        'codigo_cliente' => 'required',
+        'nombre_cliente' => 'required',
+        'nit_cliente' => 'required',
+        'direccion_cliente' => 'required',
     ];
-    
+
     public function updatedSearch()
     {
         $this->resetPage();
@@ -39,7 +39,7 @@ class Index extends Component
 
         try {
             $this->validate();
-            
+
             if ($this->cliente_id) {
                 // Editar cliente
                 $cliente = Cliente::find($this->cliente_id);
@@ -68,7 +68,7 @@ class Index extends Component
 
             // Reiniciar los campos
             $this->resetInput();
-            
+
         } catch (\Throwable $th) {
             DB::rollBack();
             session()->flash('error', $th->getMessage());
@@ -91,10 +91,10 @@ class Index extends Component
     public function resetInput()
     {
         $this->reset([
-            'cliente_id', 
-            'codigo_cliente', 
-            'nombre_cliente', 
-            'nit_cliente', 
+            'cliente_id',
+            'codigo_cliente',
+            'nombre_cliente',
+            'nit_cliente',
             'direccion_cliente'
         ]);
     }
@@ -105,7 +105,7 @@ class Index extends Component
             $query->where('nombre_cliente', 'like', '%' . $this->search . '%')
                 ->orWhere('codigo_cliente', 'like', '%' . $this->search . '%');
         })->paginate(10);
-        
+
         return view('livewire.cliente.index', [
             'clientes' => $clientes
         ]);
