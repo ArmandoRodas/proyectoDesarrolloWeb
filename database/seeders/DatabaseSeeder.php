@@ -5,7 +5,6 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Cliente;
-use App\Models\Proveedores;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         Cliente::factory(2000)->create();
+
+        $this->call(ProductoSeeder::class);
+
         Proveedores::factory(175)->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

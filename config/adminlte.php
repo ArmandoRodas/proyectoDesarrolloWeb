@@ -315,6 +315,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'active' => ['proveedores*'],
         ],
+        [
+            'text' => 'Productos',
+            'url' => 'productos',
+            'icon' => 'fas fa-fw fa-box',
+            'active' => ['productos*'],
+        ],
     ],
 
     /*
