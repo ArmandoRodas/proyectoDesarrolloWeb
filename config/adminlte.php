@@ -315,6 +315,21 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'active' => ['proveedores*'],
         ],
+        [
+            'header' => 'Parametrizaciones Generales',
+        ],
+        [
+            'text' => 'Configuraciones',
+            'icon' => 'fas fa-fw fa-cog',
+            'submenu' => [
+                [
+                    'text' => 'Empresa',
+                    'url' => '/parametrizaciones-generales/empresa',
+                    'icon' => 'fas fa-fw fa-building',
+                    'active' => ['/parametrizaciones-generales/empresa'],
+                ],
+            ],
+        ],
     ],
 
     /*

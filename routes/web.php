@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProveedoresController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,6 @@ Route::get('/clientes', [ClienteController::class, 'index'])->middleware('auth')
 
 //Proveedores
 Route::get('/proveedores', [ProveedoresController::class, 'index'])->middleware('auth')->name('proveedores.index');
+
+// Emprea
+Route::get('/parametrizaciones-generales/empresa', [EmpresaController::class, 'index'])->middleware('auth')->name('empresa.index');
