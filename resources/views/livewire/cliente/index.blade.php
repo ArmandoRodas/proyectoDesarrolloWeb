@@ -106,24 +106,26 @@
                             >
                         </div>
                         <div>
-                            <label for="id_tipo_persona">Tipo Persona</label>
+                            <label for="id_tipo_persona">Tipo Persona *</label>
                             <select 
                                 class="form-control"
                                 wire:model="id_tipo_persona" 
                                 id="id_tipo_persona"
                             >
+                                <option value="">--Seleccione--</option>
                                 @foreach ($tiposDePersonas as $tipoPersona)
                                     <option value="{{ $tipoPersona->id_tipo_persona }}">{{ $tipoPersona->nombre_tipo_persona }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div>
-                            <label for="id_estado">Estado</label>
+                            <label for="id_estado">Estado *</label>
                             <select 
                                 class="form-control"
                                 wire:model="id_estado" 
                                 id="id_estado"
                             >
+                                <option value="">--Seleccione--</option>
                                 @foreach ($estados as $estado)
                                     <option 
                                         value="{{ $estado->id_estado }}"
