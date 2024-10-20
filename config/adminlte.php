@@ -304,6 +304,9 @@ return [
             'can' => 'manage-blog',
         ],
         [
+            'header' => 'Datos Maestros de Personas',
+        ],
+        [
             'text' => 'Clientes',
             'url' => 'clientes',
             'icon' => 'fas fa-fw fa-user',
