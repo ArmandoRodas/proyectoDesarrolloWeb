@@ -13,7 +13,7 @@ Para instalar y configurar el proyecto, sigue los siguientes pasos:
 
 2. **Navega al directorio del proyecto:**
    ```bash
-   cd proyecto-curso-desarrollo-web
+   cd proyectoDesarrolloWeb
 
 3. **Instala las dependencias del proyecto:**
    ```bash
