@@ -294,46 +294,76 @@ return [
     */
 
     'menu' => [
-        [
-            'type' => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-        [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'header' => 'Datos Maestros de Personas',
-        ],
-        [
-            'text' => 'Clientes',
-            'url' => 'clientes',
-            'icon' => 'fas fa-fw fa-user',
-            'active' => ['clientes*'],
-        ],
-        [
-            'text' => 'Proveedores',
-            'url' => 'Proveedores',
-            'icon' => 'fas fa-fw fa-user',
-            'active' => ['proveedores*'],
-        ],
-        [
-            'header' => 'Parametrizaciones Generales',
-        ],
-        [
-            'text' => 'Configuraciones',
-            'icon' => 'fas fa-fw fa-cog',
-            'submenu' => [
-                [
-                    'text' => 'Empresa',
-                    'url' => '/parametrizaciones-generales/empresa',
-                    'icon' => 'fas fa-fw fa-building',
-                    'active' => ['/parametrizaciones-generales/empresa'],
-                ],
+    [
+        'type' => 'fullscreen-widget',
+        'topnav_right' => true,
+    ],
+
+    [
+        'text' => 'blog',
+        'url' => 'admin/blog',
+        'can' => 'manage-blog',
+    ],
+
+    [
+        'header' => 'Datos Maestros de Personas',
+    ],
+
+    [
+        'text' => 'Clientes',
+        'url' => 'clientes',
+        'icon' => 'fas fa-fw fa-user',
+        'active' => ['clientes*'],
+    ],
+
+    [
+        'text' => 'Proveedores',
+        'url' => 'Proveedores',
+        'icon' => 'fas fa-fw fa-user',
+        'active' => ['proveedores*'],
+    ],
+
+    [
+        'header' => 'Datos Maestros del Articulo',
+    ],
+
+    [
+        'text' => 'Inventario',
+        'icon' => 'fas fa-fw fa-box',
+        'submenu' => [
+            [
+                'text' => 'Categorias',
+                'url' => 'categorias',
+                'icon' => 'fas fa-fw fa-tag',
+                'active' => ['categorias*'],
+            ],
+            [
+                'text' => 'Subcategorias',
+                'url' => 'subcategorias',
+                'icon' => 'fas fa-fw fa-tags',
+                'active' => ['subcategorias*'],
             ],
         ],
     ],
+
+    [
+        'header' => 'Parametrizaciones Generales',
+    ],
+
+    [
+        'text' => 'Configuraciones',
+        'icon' => 'fas fa-fw fa-cog',
+        'submenu' => [
+            [
+                'text' => 'Empresa',
+                'url' => '/parametrizaciones-generales/empresa',
+                'icon' => 'fas fa-fw fa-building',
+                'active' => ['/parametrizaciones-generales/empresa'],
+            ],
+        ],
+    ],
+],
+
 
     /*
     |--------------------------------------------------------------------------
