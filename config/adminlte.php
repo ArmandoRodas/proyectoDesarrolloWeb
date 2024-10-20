@@ -321,6 +321,26 @@ return [
             'icon' => 'fas fa-fw fa-box',
             'active' => ['productos*'],
         ],
+        [
+            'text' => 'Bodega',
+            'url' => 'bodegas',
+            'icon' => 'fas fa-fw fa-box',
+            'active' => ['bodegas*'],
+            'submenu' => [
+                [
+                    'text' => 'Ver Bodega',
+                    'url' => 'bodegas',
+                    'icon' => 'fas fa-fw fa-box',
+                    'active' => ['bodegas*'],
+                ],
+                [
+                    'text' => 'Traslados',
+                    'url' => 'traslados',
+                    'icon' => 'fas fa-fw fa-box',
+                    'active' => ['traslados*'],
+                ],
+            ],
+        ],
     ],
 
     /*
