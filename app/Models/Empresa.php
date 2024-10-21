@@ -7,10 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empresa extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $table = 'tbl_empresa';
-
     protected $primaryKey = 'id_empresa';
 
     protected $fillable = [
@@ -22,7 +21,7 @@ class Empresa extends Model
         'id_pais',
         'id_departamento',
         'id_municipio',
-        'id_estado'
+        'id_estado',
     ];
 
     public function pais()

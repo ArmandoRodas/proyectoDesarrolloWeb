@@ -7,15 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Departamento extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $table = 'tbl_departamento';
-
     protected $primaryKey = 'id_departamento';
 
     protected $fillable = [
         'nombre_departamento',
-        'id_pais',
+        'id_pais'
     ];
 
     public function pais()

@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\BodegaProductoController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedoresController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\SubcategoriaController;
 use App\Http\Controllers\TrasladoController;
 use App\Livewire\bodega\BodegasInventario;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +36,18 @@ Route::get('/clientes', [ClienteController::class, 'index'])->middleware('auth')
 //Proveedores
 Route::get('/proveedores', [ProveedoresController::class, 'index'])->middleware('auth')->name('proveedores.index');
 
+// Empresa
+Route::get('/parametrizaciones-generales/empresa', [EmpresaController::class, 'index'])->middleware('auth')->name('empresa.index');
+
+//proveedores
+Route::get('/Proveedores', [ProveedoresController::class, 'index'])->middleware('auth')->name('proveedores.index');
+
+//categoria
+Route::get('/categorias', [CategoriaController::class, 'index'])->middleware('auth')->name('categorias.index');
+
+//subcategoria
+
+Route::get('/subcategorias', [SubcategoriaController::class, 'index'])->middleware('auth')->name('subcategorias.index');
 //Productos
 Route::get('/productos', [ProductoController::class, 'index'])->middleware('auth')->name('productos.index');
 

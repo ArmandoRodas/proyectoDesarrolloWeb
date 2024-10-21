@@ -15,8 +15,8 @@ return new class extends Migration
             $table->integer('id_empresa', true);
             $table->string('nombre_empresa');
             $table->integer('NIT_empresa');
-            $table->string('direccion_empresa')->nullable();
-            $table->string('telefono_empresa')->nullable();
+            $table->string('direccion_empresa');
+            $table->string('telefono_empresa');
             $table->string('email_empresa')->nullable();
             $table->integer('id_pais')->nullable()->index('id_pais');
             $table->integer('id_departamento')->nullable()->index('id_departamento');

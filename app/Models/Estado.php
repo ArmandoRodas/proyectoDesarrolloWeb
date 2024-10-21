@@ -11,9 +11,10 @@ class Estado extends Model
 
     protected $table = 'tbl_estado';
 
+    protected $primaryKey = 'id_estado';
+
     protected $fillable = [
         'nombre_estado',
         'descripcion_estado'
     ];
-
 }
