@@ -48,8 +48,8 @@ class TrasladoBodegas extends Component
             'documento_traslado' => 'TR-' . now()->timestamp,
             'id_bodega_origen' => $this->bodegaOrigen,
             'id_bodega_destino' => $this->bodegaDestino,
-            'id_usuario' => 1, /*auth()->user()->id,*/
-            'id_empresa' => 1, /*auth()->user()->empresa_id,*/
+            'id_usuario' => auth()->user()->id,
+            'id_empresa' => auth()->user()->empresa_id,
             'id_estado' => 1,
         ]);
 
