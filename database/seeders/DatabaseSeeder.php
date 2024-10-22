@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         Persona::factory(175)->create();
 
         // Usuario
-        \App\Models\User::factory()->create([
+        \App\Models\Usuario::create([
             'name' => 'Administrador',
             'email' => 'admin@gmail.com',
             'password' => '$2y$10$SOA783nBrSAZ5CLBWCrm6OX2m62ZttqGMpFAPHwcjZ7QeWx1tFtfa'
