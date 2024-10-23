@@ -1,6 +1,6 @@
 <div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#staticBackdrop">
         Crear Producto
     </button>
 
