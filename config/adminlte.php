@@ -332,6 +332,24 @@ return [
         'icon' => 'fas fa-fw fa-box',
         'submenu' => [
             [
+                'text' => 'Productos',
+                'url' => 'productos',
+                'icon' => 'fas fa-fw fa-box',
+                'active' => ['productos*'],
+            ],
+            [
+                'text' => 'Ver Bodega',
+                'url' => 'bodegas',
+                'icon' => 'fas fa-fw fa-box',
+                'active' => ['bodegas*'],
+            ],
+            [
+                'text' => 'Traslados',
+                'url' => 'traslados',
+                'icon' => 'fas fa-fw fa-box',
+                'active' => ['traslados*'],
+            ],
+            [
                 'text' => 'Categorias',
                 'url' => 'categorias',
                 'icon' => 'fas fa-fw fa-tag',
@@ -342,32 +360,6 @@ return [
                 'url' => 'subcategorias',
                 'icon' => 'fas fa-fw fa-tags',
                 'active' => ['subcategorias*'],
-            ],
-        ],
-        [
-            'text' => 'Productos',
-            'url' => 'productos',
-            'icon' => 'fas fa-fw fa-box',
-            'active' => ['productos*'],
-        ],
-        [
-            'text' => 'Bodega',
-            'url' => 'bodegas',
-            'icon' => 'fas fa-fw fa-box',
-            'active' => ['bodegas*'],
-            'submenu' => [
-                [
-                    'text' => 'Ver Bodega',
-                    'url' => 'bodegas',
-                    'icon' => 'fas fa-fw fa-box',
-                    'active' => ['bodegas*'],
-                ],
-                [
-                    'text' => 'Traslados',
-                    'url' => 'traslados',
-                    'icon' => 'fas fa-fw fa-box',
-                    'active' => ['traslados*'],
-                ],
             ],
         ],
     ],

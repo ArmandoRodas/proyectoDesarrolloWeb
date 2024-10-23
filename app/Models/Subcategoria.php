@@ -19,7 +19,6 @@ protected $primaryKey = 'id_subcategoria';
         'id_estado',
     ];
 
-
     public function estado()
     {
         return $this->belongsTo(Estado::class, 'id_estado', 'id_estado');
@@ -29,8 +28,6 @@ protected $primaryKey = 'id_subcategoria';
     {
         return $this->belongsTo(Categoria::class, 'id_categoria', 'id_categoria');
     }
-
-  
 }
 
 

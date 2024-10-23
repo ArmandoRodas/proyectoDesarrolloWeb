@@ -55,4 +55,4 @@ Route::get('/productos', [ProductoController::class, 'index'])->middleware('auth
 Route::get('/bodegas/{bodegaId}', [BodegaProductoController::class, 'index'])->middleware('auth')->name('bodegas.index');
 
 //Traslados
-Route::get('/traslados', [TrasladoController::class, 'index'])->middleware('auth')->name('traslados.indTrasladoController');
+Route::get('/traslados', [TrasladoController::class, 'index'])->middleware('auth')->name('traslados.index');

@@ -10,8 +10,11 @@ class BodegaProducto extends Model
     use HasFactory;
 
     protected $table = 'tbl_bodega_producto';
-    protected $primaryKey = 'id_bodega';
+
+    protected $primaryKey = 'id_bodega_producto';
+
     protected $fillable = [
+        'id_bodega',
         'id_producto',
         'stock_producto',
         'stock_min_producto',
