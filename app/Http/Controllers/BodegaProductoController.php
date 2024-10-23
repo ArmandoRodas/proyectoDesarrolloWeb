@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class BodegaProductoController extends Controller
 {
-    public function index($bodegaId)
+    public function index()
     {
-        return view('bodegas.index', compact('bodegaId'));
+        return view('bodegas.index');
     }
 }
