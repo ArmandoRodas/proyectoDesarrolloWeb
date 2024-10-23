@@ -3,9 +3,8 @@
 @section('title', 'Clientes')
 
 @section('content_header')
-    <h1>Clientes</h1>
 @stop
 
 @section('content')
-    <livewire:cliente.index>
+    <livewire:bodega.BodegasInventario>
 @stop

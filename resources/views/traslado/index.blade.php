@@ -1,11 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Clientes')
+@section('title', 'Proveedores')
 
 @section('content_header')
-    <h1>Clientes</h1>
 @stop
 
 @section('content')
-    <livewire:cliente.index>
+    <livewire:traslado-bodega.traslado-bodegas>
 @stop
