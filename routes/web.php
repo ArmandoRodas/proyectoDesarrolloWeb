@@ -7,6 +7,9 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\SubcategoriaController;
+use App\Http\Controllers\PaisController;
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\TrasladoController;
 use App\Livewire\bodega\BodegasInventario;
 use Illuminate\Support\Facades\Route;
@@ -46,8 +49,17 @@ Route::get('/Proveedores', [ProveedoresController::class, 'index'])->middleware(
 Route::get('/categorias', [CategoriaController::class, 'index'])->middleware('auth')->name('categorias.index');
 
 //subcategoria
-
 Route::get('/subcategorias', [SubcategoriaController::class, 'index'])->middleware('auth')->name('subcategorias.index');
+
+//Pais 
+Route::get('/paises', [PaisController::class, 'index'])->middleware('auth')->name('paises.index');
+
+//Departamento
+Route::get('/departamentos', [DepartamentoController::class, 'index'])->middleware('auth')->name('departamentos.index');
+
+//Municipio
+Route::get('/municipios', [MunicipioController::class, 'index'])->middleware('auth')->name('municipios.index');
+
 //Productos
 Route::get('/productos', [ProductoController::class, 'index'])->middleware('auth')->name('productos.index');
 
@@ -56,3 +68,4 @@ Route::get('/bodegas', [BodegaProductoController::class, 'index'])->middleware('
 
 //Traslados
 Route::get('/traslados', [TrasladoController::class, 'index'])->middleware('auth')->name('traslados.index');
+
