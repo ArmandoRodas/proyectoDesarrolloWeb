@@ -1,11 +1,11 @@
 @extends('adminlte::page')
 
-@section('title', 'Clientes')
+@section('title', 'Articulos')
 
 @section('content_header')
-    <h1>Clientes</h1>
+    <h1>Productos</h1>
 @stop
 
 @section('content')
-    <livewire:cliente.index>
+    <livewire:producto.index>
 @stop

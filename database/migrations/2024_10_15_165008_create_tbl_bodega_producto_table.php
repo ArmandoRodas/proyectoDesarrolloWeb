@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tbl_bodega_producto', function (Blueprint $table) {
+            $table->integer('id_bodega_producto', true);
             $table->integer('id_bodega')->nullable()->index('id_bodega');
             $table->integer('id_producto')->nullable()->index('id_producto');
             $table->integer('stock_producto')->nullable();
