@@ -5,6 +5,9 @@ use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\SubcategoriaController;
+use App\Http\Controllers\PaisController;
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\MunicipioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,3 +47,12 @@ Route::get('/categorias', [CategoriaController::class, 'index'])->middleware('au
 
 //subcategoria
 Route::get('/subcategorias', [SubcategoriaController::class, 'index'])->middleware('auth')->name('subcategorias.index');
+
+//Pais 
+Route::get('/paises', [PaisController::class, 'index'])->middleware('auth')->name('paises.index');
+
+//Departamento
+Route::get('/departamentos', [DepartamentoController::class, 'index'])->middleware('auth')->name('departamentos.index');
+
+//Municipio
+Route::get('/municipios', [MunicipioController::class, 'index'])->middleware('auth')->name('municipios.index');

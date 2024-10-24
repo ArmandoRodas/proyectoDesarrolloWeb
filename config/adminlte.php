@@ -360,6 +360,30 @@ return [
                 'icon' => 'fas fa-fw fa-building',
                 'active' => ['/parametrizaciones-generales/empresa'],
             ],
+            [
+                'text' => 'Dirección',
+                'icon' => 'fas fa-fw fa-cog',
+                'submenu' => [
+                    [
+                        'text' => 'Pais',
+                        'url' => '/paises',
+                        'icon' => 'fa-solid fa-earth-americas',
+                        'active' => ['/paises'],
+                    ],
+                    [
+                        'text' => 'Departamento',
+                        'url' => '/departamentos',
+                        'icon' => 'fa-solid fa-earth-americas',
+                        'active' => ['/departamentos'],
+                    ],
+                    [
+                        'text' => 'Municipio',
+                        'url' => '/municipios',
+                        'icon' => 'fa-solid fa-earth-americas',
+                        'active' => ['/municipios'],
+                    ],
+                ],
+            ],
         ],
     ],
 ],

@@ -23,7 +23,7 @@ class Index extends Component
     
 
     protected $paginationTheme = 'bootstrap';
-     
+
     protected $rules = [
         'nombre_categoria' => 'required|string|max:255',
         'id_estado' => 'required|integer|exists:tbl_estado,id_estado',  //asegura que el estado exista
