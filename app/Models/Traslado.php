@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +11,8 @@ class Traslado extends Model
     use HasFactory;
 
     protected $table = 'tbl_traslado';
+
+    protected $primaryKey = 'id_traslado';
 
     protected $fillable = [
         'fecha_traslado',
@@ -34,6 +37,12 @@ class Traslado extends Model
 
     public function detalles()
     {
-        return $this->hasMany(TrasladoDetalle::class, 'id_traslado');
+        return $this->belongsTo(TrasladoDetalle::class, 'id_traslado');
     }
+
+    public function getFechaTrasladoAttribute()
+    {
+        return Carbon::parse($this->attributes['fecha_traslado'])->format('d/m/Y');
+    }
+
 }

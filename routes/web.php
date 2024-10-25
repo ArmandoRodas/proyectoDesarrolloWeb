@@ -53,6 +53,8 @@ Route::get('/productos', [ProductoController::class, 'index'])->middleware('auth
 
 //Bodegas
 Route::get('/bodegas', [BodegaProductoController::class, 'index'])->middleware('auth')->name('bodegas.index');
+Route::get('/bodegas/create', [BodegaProductoController::class, 'create'])->middleware('auth')->name('bodegas.create');
 
 //Traslados
 Route::get('/traslados', [TrasladoController::class, 'index'])->middleware('auth')->name('traslados.index');
+Route::get('/traslados/ver', [TrasladoController::class, 'show'])->middleware('auth')->name('traslados.show');

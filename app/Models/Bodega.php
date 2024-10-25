@@ -18,4 +18,14 @@ class Bodega extends Model
         'id_empresa'
     ];
 
+    public function sucursal()
+    {
+        return $this->belongsTo(Sucursal::class, 'id_sucursal', 'id_sucursal');
+    }
+
+    public function empresa()
+    {
+        return $this->belongsTo(Empresa::class, 'id_empresa', 'id_empresa');
+    }
+
 }
