@@ -10,6 +10,7 @@ class TrasladoDetalle extends Model
     use HasFactory;
 
     protected $table = 'tbl_detalle_traslado';
+    protected $primaryKey = 'id_detalle_traslado';
 
     protected $fillable = [
         'id_traslado',
@@ -17,13 +18,11 @@ class TrasladoDetalle extends Model
         'cantidad_trasladar'
     ];
 
-    // Relación con el traslado
     public function traslado()
     {
         return $this->belongsTo(Traslado::class, 'id_traslado');
     }
 
-    // Relación con el producto
     public function producto()
     {
         return $this->belongsTo(Producto::class, 'id_producto');

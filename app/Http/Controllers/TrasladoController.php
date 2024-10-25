@@ -10,4 +10,9 @@ class TrasladoController extends Controller
     {
         return view('traslado.index');
     }
+
+    public function show()
+    {
+        return view('traslado.showTraslado');
+    }
 }

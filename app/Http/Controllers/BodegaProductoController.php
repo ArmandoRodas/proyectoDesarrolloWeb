@@ -10,4 +10,9 @@ class BodegaProductoController extends Controller
     {
         return view('bodegas.index');
     }
+
+    public function create()
+    {
+        return view('bodegas.create');
+    }
 }

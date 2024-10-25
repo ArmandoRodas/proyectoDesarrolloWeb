@@ -338,16 +338,42 @@ return [
                 'active' => ['productos*'],
             ],
             [
-                'text' => 'Ver Bodega',
-                'url' => 'bodegas',
+                'text' => 'Bodega',
                 'icon' => 'fas fa-fw fa-box',
-                'active' => ['bodegas*'],
+                'submenu' => [
+
+                    [
+                        'text' => 'Ver Bodegas',
+                        'url' => 'bodegas',
+                        'icon' => 'fas fa-fw fa-eye',
+                        'active' => ['bodegas'],
+                    ],
+                    [
+                        'text' => 'Crear Bodega',
+                        'url' => 'bodegas/create',
+                        'icon' => 'fas fa-fw fa-plus',
+                        'active' => ['bodegas.create'],
+
+                    ],
+                ],
             ],
             [
                 'text' => 'Traslados',
-                'url' => 'traslados',
-                'icon' => 'fas fa-fw fa-box',
-                'active' => ['traslados*'],
+                'icon' => 'fas fa-fw fa-plus',
+                'submenu' => [
+                    [
+                        'text' => 'Ver Traslados',
+                        'url' => 'traslados',
+                        'icon' => 'fas fa-fw fa-eye',
+                        'active' => ['traslados'],
+                    ],
+                    [
+                        'text' => 'Crear Traslado',
+                        'url' => 'traslados/create',
+                        'icon' => 'fas fa-fw fa-plus',
+                        'active' => ['traslados.create'],
+                    ],
+                ],
             ],
             [
                 'text' => 'Categorias',
