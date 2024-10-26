@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('tbl_cuenta_x_cobrar', function (Blueprint $table) {
             $table->integer('id_cxc', true);
-            $table->integer('id_cliente')->nullable()->index('id_cliente');
-            $table->decimal('monto_cxc', 10)->nullable();
-            $table->date('fecha_emision_cxc')->nullable();
+            $table->integer('id_venta')->nullable()->index('id_venta');
+            $table->integer('id_persona')->nullable()->index('id_persona');
+            $table->integer('dias_credito')->nullable();
             $table->date('fecha_vencimiento_cxc')->nullable();
+            $table->decimal('monto_cxc', 10)->nullable();
+            $table->decimal('saldo_pendiente_cxc', 10)->nullable();
             $table->integer('id_estado')->nullable()->index('id_estado');
             $table->integer('id_sucursal')->nullable()->index('id_sucursal');
-            $table->string('descripcion_cxc')->nullable();
             $table->timestamp('created_at')->nullable()->useCurrent();
             $table->timestamp('updated_at')->useCurrentOnUpdate()->nullable()->useCurrent();
             $table->softDeletes();

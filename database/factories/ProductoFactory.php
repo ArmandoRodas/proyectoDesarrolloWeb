@@ -22,8 +22,8 @@ class ProductoFactory extends Factory
             'cod_barra' => $this->faker->unique()->ean13(), // Genera un código de barras EAN13
             'nombre_producto' => $this->faker->words(3, true),
             'descripcion_producto' => $this->faker->sentence(),
-            'id_marca' => $this->faker->numberBetween(1, 10),
-            'id_subcategoria' => $this->faker->numberBetween(1, 10),
+            // 'id_marca' => $this->faker->numberBetween(1, 10),
+            // 'id_subcategoria' => $this->faker->numberBetween(1, 10),
             'vencimiento_producto' => $this->faker->date(),
             'precio_compra_producto' => $this->faker->randomFloat(2, 10, 100),
             'precio_venta_producto' => $this->faker->randomFloat(2, 20, 200),
