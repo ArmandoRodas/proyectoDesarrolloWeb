@@ -156,7 +156,7 @@
                             <select class="form-control" wire:model="id_estado" id="estados">
                                 <option value="">Selecciona un estado</option>
                                 @foreach($estados as $estado)
-                                    <option value="{{ $estado->id }}">{{ $estado->nombre_estado }}</option>
+                                    <option value="{{ $estado->id_estado }}">{{ $estado->nombre_estado }}</option>
                                 @endforeach
                             </select>
                         </div>
