@@ -82,6 +82,7 @@ Route::get('/usuarios', [UsuarioController::class, 'index'])->middleware('auth')
 // Ventas
 Route::get('/ventas/nuevo-documento', [VentaController::class, 'nuevoDocumento'])->middleware('auth')->name('nuevoDocumento');
 Route::get('/ventas/consulta-documento', [VentaController::class, 'consultaDocumento'])->middleware('auth')->name('consultaDocumento');
+Route::get('/ventas/consulta-documento/{venta:documento_venta}', [VentaController::class, 'consultaDocumentoDetalle'])->middleware('auth')->name('consultaDocumentoDetalle');
 
 // Unidad de medida
 Route::get('/unidad_medida', [UnidadMedidaController::class, 'index'])->middleware('auth')->name('unidad_medida.index');
