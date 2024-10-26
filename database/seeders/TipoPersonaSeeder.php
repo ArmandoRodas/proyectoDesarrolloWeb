@@ -14,10 +14,26 @@ class TipoPersonaSeeder extends Seeder
     public function run(): void
     {
         DB::table('tbl_tipo_persona')->insert([
-            ['nombre_tipo_persona' => 'Cliente'],
-            ['nombre_tipo_persona' => 'Proveedor'],
-            ['nombre_tipo_persona' => 'Empleado'],
-            ['nombre_tipo_persona' => 'Usuario'],
+            [
+                'nombre_tipo_persona' => 'Cliente',
+                'serie_persona' => 'C',
+                'secuencia_persona' => 0
+            ],
+            [
+                'nombre_tipo_persona' => 'Proveedor',
+                'serie_persona' => 'P',
+                'secuencia_persona' => 0
+            ],
+            [
+                'nombre_tipo_persona' => 'Empleado',
+                'serie_persona' => 'E',
+                'secuencia_persona' => 0
+            ],
+            [
+                'nombre_tipo_persona' => 'Usuario',
+                'serie_persona' => 'U',
+                'secuencia_persona' => 0
+            ],
         ]);
     }
 }

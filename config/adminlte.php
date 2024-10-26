@@ -310,17 +310,10 @@ return [
     ],
 
     [
-        'text' => 'Clientes',
-        'url' => 'clientes',
+        'text' => 'Personas',
+        'url' => 'personas',
         'icon' => 'fas fa-fw fa-user',
-        'active' => ['clientes*'],
-    ],
-
-    [
-        'text' => 'Proveedores',
-        'url' => 'Proveedores',
-        'icon' => 'fas fa-fw fa-user',
-        'active' => ['proveedores*'],
+        'active' => ['personas*'],
     ],
 
     [

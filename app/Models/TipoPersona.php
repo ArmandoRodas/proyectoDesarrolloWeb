@@ -13,6 +13,8 @@ class TipoPersona extends Model
     protected $primaryKey = 'id_tipo_persona';
 
     protected $fillable = [
-        'nombre_tipo_persona'
+        'nombre_tipo_persona',
+        'serie_persona',
+        'secuencia_persona'
     ];
 }
