@@ -1,10 +1,9 @@
 <?php
 
 use App\Http\Controllers\BodegaProductoController;
-use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProductoController;
-use App\Http\Controllers\ProveedoresController;
+use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\SubcategoriaController;
 use App\Http\Controllers\PaisController;
@@ -33,17 +32,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Clientes
-Route::get('/clientes', [ClienteController::class, 'index'])->middleware('auth')->name('clientes.index');
-
-//Proveedores
-Route::get('/proveedores', [ProveedoresController::class, 'index'])->middleware('auth')->name('proveedores.index');
+//Personas
+Route::get('/personas', [PersonaController::class, 'index'])->middleware('auth')->name('personas.index');
 
 // Empresa
 Route::get('/parametrizaciones-generales/empresa', [EmpresaController::class, 'index'])->middleware('auth')->name('empresa.index');
-
-//proveedores
-Route::get('/Proveedores', [ProveedoresController::class, 'index'])->middleware('auth')->name('proveedores.index');
 
 //categoria
 Route::get('/categorias', [CategoriaController::class, 'index'])->middleware('auth')->name('categorias.index');
@@ -51,7 +44,7 @@ Route::get('/categorias', [CategoriaController::class, 'index'])->middleware('au
 //subcategoria
 Route::get('/subcategorias', [SubcategoriaController::class, 'index'])->middleware('auth')->name('subcategorias.index');
 
-//Pais 
+//Pais
 Route::get('/paises', [PaisController::class, 'index'])->middleware('auth')->name('paises.index');
 
 //Departamento
