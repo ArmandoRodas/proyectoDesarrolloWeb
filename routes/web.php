@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BodegaProductoController;
+use App\Http\Controllers\CajaController;
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PersonaController;
@@ -10,6 +12,8 @@ use App\Http\Controllers\PaisController;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\TrasladoController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\VentaController;
 use App\Livewire\bodega\BodegasInventario;
 use Illuminate\Support\Facades\Route;
 
@@ -64,3 +68,15 @@ Route::get('/bodegas/create', [BodegaProductoController::class, 'create'])->midd
 Route::get('/traslados', [TrasladoController::class, 'index'])->middleware('auth')->name('traslados.index');
 Route::get('/traslados/ver', [TrasladoController::class, 'show'])->middleware('auth')->name('traslados.show');
 
+
+// Cajas
+Route::get('/cajas', [CajaController::class, 'index'])->middleware('auth')->name('cajas.index');
+Route::get('/cajas/apertura-de-caja', [CajaController::class, 'aperturaCaja'])->middleware('auth')->name('aperturaCaja');
+Route::get('/cajas/corte-de-caja', [CajaController::class, 'corteCaja'])->middleware('auth')->name('corteCaja');
+
+// Usuarios
+Route::get('/usuarios', [UsuarioController::class, 'index'])->middleware('auth')->name('usuarios.index');
+
+// Ventas
+Route::get('/ventas/nuevo-documento', [VentaController::class, 'nuevoDocumento'])->middleware('auth')->name('nuevoDocumento');
+Route::get('/ventas/consulta-documento', [VentaController::class, 'consultaDocumento'])->middleware('auth')->name('consultaDocumento');

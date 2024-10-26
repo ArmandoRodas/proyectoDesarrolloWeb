@@ -6,18 +6,16 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class EstadoSeeder extends Seeder
+class TipoVentaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('tbl_estado')->insert([
-            ['nombre_estado' => 'Activo'],
-            ['nombre_estado' => 'Inactivo'],
-            ['nombre_estado' => 'Abierto'],
-            ['nombre_estado' => 'Cerrado'],
+        DB::table('tbl_tipo_venta')->insert([
+            ['nombre_tipoVenta' => 'CONTADO'],
+            ['nombre_tipoVenta' => 'CREDITO'],
         ]);
     }
 }

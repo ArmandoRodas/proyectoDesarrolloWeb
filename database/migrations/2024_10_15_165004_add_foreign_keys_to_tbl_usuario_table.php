@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreign(['id_rol'], 'tbl_usuario_ibfk_2')->references(['id_rol'])->on('tbl_rol')->onUpdate('no action')->onDelete('no action');
             $table->foreign(['id_empresa'], 'tbl_usuario_ibfk_3')->references(['id_empresa'])->on('tbl_empresa')->onUpdate('no action')->onDelete('no action');
             $table->foreign(['id_sucursal'], 'tbl_usuario_ibfk_4')->references(['id_sucursal'])->on('tbl_sucursal')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['id_caja'], 'tbl_caja_ibfk_5')->references(['id_caja'])->on('tbl_caja')->onUpdate('no action')->onDelete('no action');
         });
     }
 
