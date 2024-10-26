@@ -323,7 +323,7 @@ return [
                 'text' => 'Consulta de documento',
                 'url' => 'ventas/consulta-documento',
                 'icon' => 'fas fa-fw fa-angle-right',
-                'active' => ['ventas/consulta-de-documento'],
+                'active' => ['ventas/consulta-documento*'],
             ],
         ],
     ],

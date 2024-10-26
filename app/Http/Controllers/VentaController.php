@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\AperturaCaja;
+use App\Models\Venta;
+use App\Models\VentaDetalle;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,5 +39,15 @@ class VentaController extends Controller
     public function consultaDocumento()
     {
         return view('ventas.consultaDocumento');
+    }
+
+    public function consultaDocumentoDetalle(Venta $venta)
+    {
+        $ventaDetalle = VentaDetalle::where('id_venta', $venta->id_venta)->get();
+
+        return view('ventas.detalleConsultaDocumento', [
+            'venta' => $venta,
+            'ventaDetalle' => $ventaDetalle
+        ]);
     }
 }
