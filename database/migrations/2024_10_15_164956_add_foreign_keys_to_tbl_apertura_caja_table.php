@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::table('tbl_apertura_caja', function (Blueprint $table) {
             $table->foreign(['id_caja'], 'tbl_apertura_caja_ibfk_1')->references(['id_caja'])->on('tbl_caja')->onUpdate('no action')->onDelete('no action');
-            $table->foreign(['id_usuario'], 'tbl_apertura_caja_ibfk_2')->references(['id_usuario'])->on('tbl_usuario')->onUpdate('no action')->onDelete('no action');
             $table->foreign(['id_estado'], 'tbl_apertura_caja_ibfk_3')->references(['id_estado'])->on('tbl_estado')->onUpdate('no action')->onDelete('no action');
         });
     }
@@ -25,7 +24,6 @@ return new class extends Migration
     {
         Schema::table('tbl_apertura_caja', function (Blueprint $table) {
             $table->dropForeign('tbl_apertura_caja_ibfk_1');
-            $table->dropForeign('tbl_apertura_caja_ibfk_2');
             $table->dropForeign('tbl_apertura_caja_ibfk_3');
         });
     }

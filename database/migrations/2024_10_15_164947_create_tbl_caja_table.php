@@ -15,9 +15,6 @@ return new class extends Migration
             $table->integer('id_caja', true);
             $table->string('nombre_caja')->nullable();
             $table->integer('id_sucursal')->nullable()->index('id_sucursal');
-            $table->decimal('saldo_inicial_caja', 10)->nullable();
-            $table->decimal('saldo_actual_caja', 10)->nullable();
-            $table->date('fecha_creacion_caja')->nullable();
             $table->string('descripcion_caja')->nullable();
             $table->integer('id_estado')->nullable()->index('id_estado');
             $table->integer('id_empresa')->nullable()->index('id_empresa');
