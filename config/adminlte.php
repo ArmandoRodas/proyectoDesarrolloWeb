@@ -392,6 +392,12 @@ return [
                 ],
             ],
             [
+                'text' => 'Marca',
+                'url' => 'marca',
+                'icon' => 'fas fa-fw fa-tag',
+                'active' => ['marca*'],
+            ],
+            [
                 'text' => 'Categorias',
                 'url' => 'categorias',
                 'icon' => 'fas fa-fw fa-tag',
@@ -402,6 +408,12 @@ return [
                 'url' => 'subcategorias',
                 'icon' => 'fas fa-fw fa-tags',
                 'active' => ['subcategorias*'],
+            ],
+            [
+                'text' => 'Unidad de Medida',
+                'url' => 'unidad_medida',
+                'icon' => 'fas fa-solid fa-ruler',
+                'active' => ['unidad_medida*'],
             ],
         ],
     ],
