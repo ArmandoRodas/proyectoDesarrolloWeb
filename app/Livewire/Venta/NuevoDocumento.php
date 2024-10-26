@@ -162,7 +162,8 @@ class NuevoDocumento extends Component
                     'dias_credito' => $this->dias_credito,
                     'fecha_vencimiento_cxc' => Carbon::now()->addDays($this->dias_credito),
                     'monto_cxc' => $venta->total_venta,
-                    'saldo_pendiente_cxc' => $venta->total_venta
+                    'saldo_pendiente_cxc' => $venta->total_venta,
+                    'id_estado' => 7
                 ]);
             }else { // Si no es al credito
 

@@ -18,7 +18,7 @@ class CuentaPorCobrar extends Model
         'dias_credito',
         'fecha_vencimiento_cxc',
         'monto_cxc',
-        'saldo_pediente_cxc',
+        'saldo_pendiente_cxc',
         'id_estado'
     ];
 

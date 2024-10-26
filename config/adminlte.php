@@ -434,6 +434,7 @@ return [
                         'text' => 'Facturas por cobrar',
                         'url' => 'pagos-cobros/clientes/facturas-por-cobrar',
                         'icon' => 'fas fa-fw fa-angle-right',
+                        'active' => ['pagos-cobros/clientes/facturas-por-cobrar*'],
                     ],
                     [
                         'text' => 'Historial de cobros',
