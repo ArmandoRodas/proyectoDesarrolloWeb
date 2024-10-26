@@ -11,6 +11,10 @@
         <div class="card-body">
             <ul>
                 <li>
+                    <label for="documento_venta">Documento No:</label>
+                    {{ $venta->documento_venta }}
+                </li>
+                <li>
                     <label for="fecha_venta">Fecha:</label>
                     {{ date('d-m-Y H:i:s', strtotime($venta->created_at))}}
                 </li>
