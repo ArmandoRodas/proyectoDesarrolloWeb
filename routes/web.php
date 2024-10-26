@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\CuentasPorCobrarController;
 use App\Http\Controllers\SubcategoriaController;
 use App\Http\Controllers\PaisController;
 use App\Http\Controllers\DepartamentoController;
@@ -89,3 +90,9 @@ Route::get('/unidad_medida', [UnidadMedidaController::class, 'index'])->middlewa
 
 //Marca
 Route::get('/marca', [MarcaController::class, 'index'])->middleware('auth')->name('marca.index');
+
+// CXC
+Route::get('/pagos-cobros/clientes/facturas-por-cobrar', [CuentasPorCobrarController::class, 'facturasCobrar'])->middleware('auth')->name('facturasCobrar');
+Route::get('/pagos-cobros/clientes/facturas-por-cobrar/{cxc}/pago', [CuentasPorCobrarController::class, 'pagoFactura'])->middleware('auth')->name('pagoFactura');
+Route::post('/pagos-cobros/clientes/facturas-por-cobrar/{cxc}/store', [CuentasPorCobrarController::class, 'pagoFacturaStore'])->middleware('auth')->name('pagoFactura.store');
+Route::get('/pagos-cobros/clientes/historial-de-cobros', [CuentasPorCobrarController::class, 'historialCobros'])->middleware('auth')->name('historialCobros');
