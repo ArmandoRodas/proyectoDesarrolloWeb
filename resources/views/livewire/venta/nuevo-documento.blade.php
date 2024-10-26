@@ -1,6 +1,18 @@
 <div>
     <div class="card">
         <div class="card-body">
+            {{-- Manejo de mensajes --}}
+            @if (session('success'))
+                <div class="alert alert-success mt-3" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if (session('error'))
+                <div class="alert alert-danger mt-3" role="alert">
+                    {{ session('error') }}
+                </div>
+            @endif
             <div class="row">
                 {{-- ENCABEZADO --}}
                 <div class="col-md-2 mb-3">
@@ -23,6 +35,7 @@
                         wire:model.live='searchTermCliente'
                         wire:click='toggleDropdownCliente'
                         placeholder="Buscar Cliente"
+                        {{ $subtotal > 0 ? 'disabled' : '' }}
                     >
                     {{-- Lista deplegable de Clientes --}}
                     @if ($showDropdownCliente && (strlen($searchTermCliente) > 2 || count($clientes) > 0))
@@ -53,8 +66,8 @@
                 <div class="col-md-2 mb-3">
                     <label for="id_tipo_documento">Tipo de documento *</label>
                     <select 
-                        name="id_tipo_documento" 
                         id="id_tipo_documento"
+                        wire:model="id_tipo_documento" 
                         class="form-control"
                     >
                         <option value="">--Seleccione--</option>
@@ -66,8 +79,8 @@
                 <div class="col-md-2 mb-3">
                     <label for="id_medio_pago">Metodo de pago *</label>
                     <select 
-                        name="id_medio_pago" 
                         id="id_medio_pago"
+                        wire:model="id_medio_pago"
                         class="form-control"
                     >
                         <option value="">--Seleccione--</option>
@@ -79,8 +92,8 @@
                 <div class="col-md-2 mb-3">
                     <label for="id_tipoVenta">Tipo de venta *</label>
                     <select 
-                        name="id_tipoVenta" 
                         id="id_tipoVenta"
+                        wire:model.live="id_tipoVenta" 
                         class="form-control"
                     >
                         <option value="">--Seleccione--</option>
@@ -89,12 +102,26 @@
                         @endforeach
                     </select>
                 </div>
+                @if ($id_tipoVenta == 2)
+                    <div class="col-md-2 mb-3">
+                        <label for="dias_credito">Dias credito</label>
+                        <input 
+                            type="text"
+                            class="form-control"
+                            id="dias_credito"
+                            wire:model="dias_credito"
+                            pattern="^\d*$"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')"   
+                        >
+                    </div>
+                @endif
             </div>
 
             {{-- FINALIZAR VENTA --}}
             @if ($subtotal > 0)
                 <button
                     class="btn btn-success"
+                    wire:click="finalizarVenta"
                 >
                     Finalizar Venta
                 </button>

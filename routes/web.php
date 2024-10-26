@@ -13,12 +13,9 @@ use App\Http\Controllers\PaisController;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\TrasladoController;
-<<<<<<< Updated upstream
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\VentaController;
-=======
 use App\Http\Controllers\UnidadMedidaController;
->>>>>>> Stashed changes
 use App\Livewire\bodega\BodegasInventario;
 use Illuminate\Support\Facades\Route;
 
@@ -73,7 +70,6 @@ Route::get('/bodegas/create', [BodegaProductoController::class, 'create'])->midd
 Route::get('/traslados', [TrasladoController::class, 'index'])->middleware('auth')->name('traslados.index');
 Route::get('/traslados/ver', [TrasladoController::class, 'show'])->middleware('auth')->name('traslados.show');
 
-<<<<<<< Updated upstream
 
 // Cajas
 Route::get('/cajas', [CajaController::class, 'index'])->middleware('auth')->name('cajas.index');
@@ -86,10 +82,9 @@ Route::get('/usuarios', [UsuarioController::class, 'index'])->middleware('auth')
 // Ventas
 Route::get('/ventas/nuevo-documento', [VentaController::class, 'nuevoDocumento'])->middleware('auth')->name('nuevoDocumento');
 Route::get('/ventas/consulta-documento', [VentaController::class, 'consultaDocumento'])->middleware('auth')->name('consultaDocumento');
-=======
-//UnidadMedidaaaaaaaaaa
+
+// Unidad de medida
 Route::get('/unidad_medida', [UnidadMedidaController::class, 'index'])->middleware('auth')->name('unidad_medida.index');
 
 //Marca
 Route::get('/marca', [MarcaController::class, 'index'])->middleware('auth')->name('marca.index');
->>>>>>> Stashed changes
