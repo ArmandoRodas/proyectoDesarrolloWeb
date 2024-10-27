@@ -19,11 +19,21 @@ class Producto extends Model
         'descripcion_producto',
         'id_marca',
         'id_subcategoria',
-        'vencimiento',
+        'vencimiento_producto',
         'precio_compra_producto',
         'precio_venta_producto',
         'id_estado',
         'id_empresa',
         'id_sucursal'
     ];
+
+    public function bodegaProducto()
+    {
+        return $this->hasMany(BodegaProducto::class, 'id_producto', 'id_producto');
+    }
+
+    public function usuario()
+    {
+        return $this->belongsTo(Usuario::class, 'id_usuario');
+    }
 }
