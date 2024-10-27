@@ -51,9 +51,20 @@
                     <td>{{ $documento->metodoPago->nombre_metodo_pago }}</td>
                     <td>{{ $documento->total_venta }}</td>
                     <td>
-                        <button class="btn btn-sm btn-danger">
+                        <a 
+                            href="{{ route('pdf.venta', $documento) }}"
+                            class="btn btn-sm btn-danger"
+                            target="_blank"
+                        >
                             <i class="far fa-file-pdf"></i>
-                        </button>
+                        </a>
+                        <a 
+                            href="{{ route('ticket.venta', $documento) }}"
+                            class="btn btn-sm btn-primary"
+                            target="_blank"
+                        >
+                            <i class="fas fa-print"></i>
+                        </a>
                     </td>
                 </tr>
             @empty

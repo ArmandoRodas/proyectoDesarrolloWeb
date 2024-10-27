@@ -13,6 +13,8 @@ use App\Http\Controllers\SubcategoriaController;
 use App\Http\Controllers\PaisController;
 use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\PdfVentaController;
+use App\Http\Controllers\TicketVentaController;
 use App\Http\Controllers\TrasladoController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\VentaController;
@@ -96,3 +98,9 @@ Route::get('/pagos-cobros/clientes/facturas-por-cobrar', [CuentasPorCobrarContro
 Route::get('/pagos-cobros/clientes/facturas-por-cobrar/{cxc}/pago', [CuentasPorCobrarController::class, 'pagoFactura'])->middleware('auth')->name('pagoFactura');
 Route::post('/pagos-cobros/clientes/facturas-por-cobrar/{cxc}/store', [CuentasPorCobrarController::class, 'pagoFacturaStore'])->middleware('auth')->name('pagoFactura.store');
 Route::get('/pagos-cobros/clientes/historial-de-cobros', [CuentasPorCobrarController::class, 'historialCobros'])->middleware('auth')->name('historialCobros');
+
+// PDF
+Route::get('/ventas/consulta-documento/{venta:documento_venta}/pdf', [PdfVentaController::class, 'index'])->middleware('auth')->name('pdf.venta');
+
+// Ticket
+Route::get('/ventas/consulta-documento/{venta:documento_venta}/ticket', [TicketVentaController::class, 'index'])->middleware('auth')->name('ticket.venta');
