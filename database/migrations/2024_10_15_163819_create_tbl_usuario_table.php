@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('id_empresa')->nullable()->index('id_empresa');
             $table->integer('id_sucursal')->nullable()->index('id_sucursal');
             $table->integer('id_caja')->nullable()->index('id_caja');
+            $table->rememberToken();
             $table->timestamp('created_at')->nullable()->useCurrent();
             $table->timestamp('updated_at')->useCurrentOnUpdate()->nullable()->useCurrent();
             $table->softDeletes();
