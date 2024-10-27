@@ -64,7 +64,7 @@ return [
     */
 
     'logo' => '<b>UMG - POS</b>',
-    'logo_img' => asset('assets/img/logo.png'),
+    'logo_img' => 'assets/img/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => asset('assets/img/logo.png'),
+            'path' => 'assets/img/logo.png',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -113,7 +113,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-            'path' => asset('assets/img/logo.png'),
+            'path' => 'assets/img/logo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
