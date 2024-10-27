@@ -402,7 +402,7 @@ return [
                 'submenu' => [
                     [
                         'text' => 'Ver Traslados',
-                        'url' => 'traslados',
+                        'url' => 'traslados/ver',
                         'icon' => 'fas fa-fw fa-eye',
                         'active' => ['traslados'],
                     ],

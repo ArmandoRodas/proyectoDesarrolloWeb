@@ -6,7 +6,7 @@ use App\Models\BodegaProducto;
 use App\Models\Estado;
 use App\Models\Marca;
 use App\Models\Producto;
-use App\Models\SubCategoria;
+use App\Models\Subcategoria;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
@@ -220,7 +220,7 @@ class index extends Component
     public function mount()
     {
         $this->marcas = Marca::all();
-        $this->subCategorias = SubCategoria::all();
+        $this->subCategorias = Subcategoria::all();
         $this->estados = Estado::all();
         $this->bodegas = BodegaProducto::all();
     }
