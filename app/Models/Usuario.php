@@ -30,6 +30,7 @@ class Usuario extends Authenticatable
         'id_rol',
         'id_empresa',
         'id_sucursal',
+        'id_caja'
     ];
 
     protected $hidden = [
@@ -40,7 +41,34 @@ class Usuario extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     public function username()
     {
         return 'email';
-    }}
+    }
+
+    public function estado()
+    {
+        return $this->belongsTo(Estado::class, 'id_estado');
+    }
+    
+    public function rol()
+    {
+        return $this->belongsTo(Rol::class, 'id_rol');
+    }
+
+    public function empresa()
+    {
+        return $this->belongsTo(Empresa::class, 'id_empresa');
+    }
+
+    public function sucursal()
+    {
+        return $this->belongsTo(Sucursal::class, 'id_sucursal');
+    }
+
+    public function caja()
+    {
+        return $this->belongsTo(Caja::class, 'id_caja');
+    }
+}

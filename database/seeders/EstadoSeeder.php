@@ -16,6 +16,11 @@ class EstadoSeeder extends Seeder
         DB::table('tbl_estado')->insert([
             ['nombre_estado' => 'Activo'],
             ['nombre_estado' => 'Inactivo'],
+            ['nombre_estado' => 'Abierto'],
+            ['nombre_estado' => 'Cerrado'],
+            ['nombre_estado' => 'Cuenta pagada'],
+            ['nombre_estado' => 'Cuenta abonada'],
+            ['nombre_estado' => 'Pendiente'],
         ]);
     }
 }

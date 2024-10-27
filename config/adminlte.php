@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>UMG - POS</b>',
+    'logo_img' => asset('assets/img/logo.png'),
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => asset('assets/img/logo.png'),
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -113,7 +113,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => asset('assets/img/logo.png'),
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -260,8 +260,8 @@ return [
     'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
+    'register_url' => null,
+    'password_reset_url' => null,
     'password_email_url' => 'password/email',
     'profile_url' => false,
 
@@ -306,21 +306,60 @@ return [
     ],
 
     [
+        'header' => 'Ventas',
+    ],
+
+    [
+        'text' => 'Ventas',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'submenu' => [
+            [
+                'text' => 'Nuevo documento',
+                'url' => 'ventas/nuevo-documento',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['ventas'],
+            ],
+            [
+                'text' => 'Consulta de documento',
+                'url' => 'ventas/consulta-documento',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['ventas/consulta-documento*'],
+            ],
+        ],
+    ],
+
+    [
+        'header' => 'Compras',
+    ],
+
+    [
+        'text' => 'Compras',
+        'icon' => 'fas fa-solid fa-box',
+        'submenu' => [
+            [
+                'text' => 'Nueva compra',
+                'url' => 'compra',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['compra*'],
+            ],
+            [
+                'text' => 'Historial compra',
+                'url' => '',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => [''],
+            ],
+        ],
+    ],
+
+    [
         'header' => 'Datos Maestros de Personas',
     ],
 
     [
-        'text' => 'Clientes',
-        'url' => 'clientes',
+        'text' => 'Personas',
+        'url' => 'personas',
         'icon' => 'fas fa-fw fa-user',
-        'active' => ['clientes*'],
-    ],
-
-    [
-        'text' => 'Proveedores',
-        'url' => 'Proveedores',
-        'icon' => 'fas fa-fw fa-user',
-        'active' => ['proveedores*'],
+        'active' => ['personas*'],
     ],
 
     [
@@ -376,6 +415,12 @@ return [
                 ],
             ],
             [
+                'text' => 'Marca',
+                'url' => 'marca',
+                'icon' => 'fas fa-fw fa-tag',
+                'active' => ['marca*'],
+            ],
+            [
                 'text' => 'Categorias',
                 'url' => 'categorias',
                 'icon' => 'fas fa-fw fa-tag',
@@ -386,6 +431,82 @@ return [
                 'url' => 'subcategorias',
                 'icon' => 'fas fa-fw fa-tags',
                 'active' => ['subcategorias*'],
+            ],
+            [
+                'text' => 'Unidad de Medida',
+                'url' => 'unidad_medida',
+                'icon' => 'fas fa-solid fa-ruler',
+                'active' => ['unidad_medida*'],
+            ],
+        ],
+    ],
+
+    [
+        'header' => 'Contabilidad',
+    ],
+
+    [
+        'text' => 'Pagos y Cobros',
+        'icon' => 'fas fa-fw fa-money-bill',
+        'submenu' => [
+            [
+                'text' => 'Clientes',
+                'icon' => 'fas fa-fw fa-user-tie',
+                'submenu' => [
+                    [
+                        'text' => 'Facturas por cobrar',
+                        'url' => 'pagos-cobros/clientes/facturas-por-cobrar',
+                        'icon' => 'fas fa-fw fa-angle-right',
+                        'active' => ['pagos-cobros/clientes/facturas-por-cobrar*'],
+                    ],
+                    [
+                        'text' => 'Historial de cobros',
+                        'url' => 'pagos-cobros/clientes/historial-de-cobros',
+                        'icon' => 'fas fa-fw fa-angle-right',
+                    ],
+                ],
+            ],
+            [
+                'text' => 'Proveedores',
+                'url' => 'proveedores',
+                'icon' => 'fas fa-fw fa-user-tag',
+                'submenu' => [
+                    [
+                        'text' => 'Facturas por pagar',
+                        'url' => 'pagos-cobros/proveedores/facturas-por-pagar',
+                        'icon' => 'fas fa-fw fa-angle-right',
+                    ],
+                    [
+                        'text' => 'Historial de pagos',
+                        'url' => 'pagos-cobros/proveedores/historail-de-pagos',
+                        'icon' => 'fas fa-fw fa-angle-right',
+                    ],
+                ],
+            ],
+        ],
+    ],
+
+    [
+        'text' => 'Cajas',
+        'icon' => 'fas fa-fw fa-cash-register',
+        'submenu' => [
+            [
+                'text' => 'Cajas',
+                'url' => 'cajas',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['cajas'],
+            ],
+            [
+                'text' => 'Apertura de caja',
+                'url' => 'cajas/apertura-de-caja',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['cajas/apertura-de-caja'],
+            ],
+            [
+                'text' => 'Corte de caja',
+                'url' => 'cajas/corte-de-caja',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['cajas/corte-de-caja'],
             ],
         ],
     ],
@@ -400,9 +521,15 @@ return [
         'submenu' => [
             [
                 'text' => 'Empresa',
-                'url' => '/parametrizaciones-generales/empresa',
+                'url' => 'parametrizaciones-generales/empresa',
                 'icon' => 'fas fa-fw fa-building',
-                'active' => ['/parametrizaciones-generales/empresa'],
+                'active' => ['parametrizaciones-generales/empresa'],
+            ],
+            [
+                'text' => 'Usuarios',
+                'url' => 'usuarios',
+                'icon' => 'fas fa-fw fa-users',
+                'active' => ['usuarios'],
             ],
             [
                 'text' => 'Dirección',

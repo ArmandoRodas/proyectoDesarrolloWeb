@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('tbl_detalle_apertura_caja', function (Blueprint $table) {
             $table->integer('id_det_apertura_caja', true);
             $table->integer('id_apertura_caja')->nullable()->index('id_apertura_caja');
-            $table->integer('id_metodo_pago')->nullable()->index('id_metodo_pago');
+            $table->string('tipo_movimiento')->nullable(); // ingreso o egreso
             $table->decimal('monto_det_apertura_caja', 10)->nullable();
-            $table->date('fecha_det_apertura_caja')->nullable();
-            $table->string('descripcion')->nullable();
+            $table->string('descripcion_movimiento')->nullable();
             $table->timestamp('created_at')->nullable()->useCurrent();
             $table->timestamp('updated_at')->useCurrentOnUpdate()->nullable()->useCurrent();
             $table->softDeletes();
