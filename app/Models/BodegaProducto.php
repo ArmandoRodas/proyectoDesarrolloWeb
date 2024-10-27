@@ -21,13 +21,11 @@ class BodegaProducto extends Model
         'stock_max_producto',
     ];
 
-    // Relación con Bodega
     public function bodega()
     {
         return $this->belongsTo(Bodega::class, 'id_bodega');
     }
 
-    // Relación con Producto
     public function producto()
     {
         return $this->belongsTo(Producto::class, 'id_producto');

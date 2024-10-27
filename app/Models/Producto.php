@@ -13,17 +13,27 @@ class Producto extends Model
     protected $primaryKey = 'id_producto';
 
     protected $fillable = [
-        'sk_producto',
+        'sku_producto',
         'cod_barra',
         'nombre_producto',
         'descripcion_producto',
         'id_marca',
         'id_subcategoria',
-        'vencimiento',
-        'precio_compra',
-        'precio_venta',
+        'vencimiento_producto',
+        'precio_compra_producto',
+        'precio_venta_producto',
         'id_estado',
         'id_empresa',
         'id_sucursal'
     ];
+
+    public function bodegaProducto()
+    {
+        return $this->hasMany(BodegaProducto::class, 'id_producto', 'id_producto');
+    }
+
+    public function usuario()
+    {
+        return $this->belongsTo(Usuario::class, 'id_usuario');
+    }
 }
