@@ -65,9 +65,13 @@
                     <td>Q.{{ $documento->saldo_pendiente_cxc }}</td>
                     <td>{{ $documento->estado->nombre_estado }}</td>
                     <td>
-                        <button class="btn btn-sm btn-danger">
+                        <a 
+                            href="{{ route('pdf.venta', $documento->venta) }}"
+                            class="btn btn-sm btn-danger"
+                            target="_blank"
+                        >
                             <i class="far fa-file-pdf"></i>
-                        </button>
+                        </a>
                         @if ($documento->estado->id_estado != 5)    
                             <a 
                                 href="{{ route('pagoFactura', $documento) }}"
