@@ -97,7 +97,6 @@ Route::get('/unidad_medida', [UnidadMedidaController::class, 'index'])->middlewa
 //Marca
 Route::get('/marca', [MarcaController::class, 'index'])->middleware('auth')->name('marca.index');
 
-<<<<<<< Updated upstream
 // CXC
 Route::get('/pagos-cobros/clientes/facturas-por-cobrar', [CuentasPorCobrarController::class, 'facturasCobrar'])->middleware('auth')->name('facturasCobrar');
 Route::get('/pagos-cobros/clientes/facturas-por-cobrar/{cxc}/pago', [CuentasPorCobrarController::class, 'pagoFactura'])->middleware('auth')->name('pagoFactura');
@@ -109,7 +108,6 @@ Route::get('/ventas/consulta-documento/{venta:documento_venta}/pdf', [PdfVentaCo
 
 // Ticket
 Route::get('/ventas/consulta-documento/{venta:documento_venta}/ticket', [TicketVentaController::class, 'index'])->middleware('auth')->name('ticket.venta');
-=======
+
 //Compras
 Route::get('/compra', [CompraController::class, 'index'])->middleware('auth')->name('compra.index');
->>>>>>> Stashed changes
