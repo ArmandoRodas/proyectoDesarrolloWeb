@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Bodega;
+namespace App\Livewire\bodega;
 
 use App\Models\Bodega;
 use App\Models\Empresa;

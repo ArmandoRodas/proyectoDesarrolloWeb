@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\BodegaProductoController;
 use App\Http\Controllers\CajaController;
-use App\Http\Controllers\ClienteController;
+//use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PersonaController;
