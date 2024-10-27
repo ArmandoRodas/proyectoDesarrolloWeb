@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('tbl_compra', function (Blueprint $table) {
             $table->integer('id_compra', true);
+            $table->string('documento_compra', true);
             $table->date('fecha_compra')->nullable();
             $table->decimal('monto_total_compra', 10)->nullable();
             $table->string('descripcion_compra')->nullable();

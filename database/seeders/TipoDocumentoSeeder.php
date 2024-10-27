@@ -17,6 +17,7 @@ class TipoDocumentoSeeder extends Seeder
             ['nombre_tipoDocumento' => 'RECIBO'],
             ['nombre_tipoDocumento' => 'FACTURA'],
             ['nombre_tipoDocumento' => 'OFERTA DE VENTA'],
+            ['nombre_tipoDocumento' => 'ORDEN DE COMPRA']
         ]);
     }
 }

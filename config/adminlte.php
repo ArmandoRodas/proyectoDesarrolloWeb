@@ -329,6 +329,29 @@ return [
     ],
 
     [
+        'header' => 'Compras',
+    ],
+
+    [
+        'text' => 'Compras',
+        'icon' => 'fas fa-solid fa-box',
+        'submenu' => [
+            [
+                'text' => 'Nueva compra',
+                'url' => 'compra',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => ['compra*'],
+            ],
+            [
+                'text' => 'Historial compra',
+                'url' => '',
+                'icon' => 'fas fa-fw fa-angle-right',
+                'active' => [''],
+            ],
+        ],
+    ],
+
+    [
         'header' => 'Datos Maestros de Personas',
     ],
 

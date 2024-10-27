@@ -119,9 +119,7 @@
                         </select>
                     </div>
 
-
-                    <!-- Mostrar el código que le tocaría -->
-                    <div class="mt-2">
+                    <div class="mb-3">
                         <label>Código:</label>
                         <p>{{ $codigo_siguiente }}</p>
                     </div>

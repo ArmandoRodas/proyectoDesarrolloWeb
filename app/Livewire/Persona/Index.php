@@ -47,7 +47,19 @@ class Index extends Component
         $this->resetPage();
     }
 
-    // Cargar datos de la persona para edición
+    public function updatedIdTipoPersona()
+    {
+        if (!$this->id_persona && $this->id_tipo_persona) {
+            $tipoPersona = TipoPersona::find($this->id_tipo_persona);
+
+            if ($tipoPersona) {
+                $nuevaSecuencia = $tipoPersona->secuencia_persona + 1;
+                $this->codigo_siguiente = $tipoPersona->serie_persona . '-' . str_pad($nuevaSecuencia, 5, '0', STR_PAD_LEFT);
+            }
+        }
+    }
+
+
     public function editarPersona($id)
     {
         $persona = Persona::findOrFail($id);
@@ -61,7 +73,7 @@ class Index extends Component
         $this->cui_persona = $persona->cui_persona;
         $this->id_tipo_persona = $persona->id_tipo_persona;
         $this->id_estado = $persona->id_estado;
-        $this->codigo_siguiente = $persona->codigo_persona; // Cargar el código actual de la persona
+        $this->codigo_siguiente = $persona->codigo_persona;
     }
 
     public function guardarPersona()
